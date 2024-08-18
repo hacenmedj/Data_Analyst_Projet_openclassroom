@@ -7,7 +7,7 @@ Ce dépôt contient une partie des projets réalisés dans le cadre du parcours 
 
 Le scénario, les objectifs, les outils utilisés et les compétences acquises sont détaillés pour chacun des projets dans le répertoire qui lui est dédié.
 
-* [Projet 10 : Détectez des faux billets avec Python](./projets/projet-10/)<br>
+* [Projet 10 : Détectez des faux billets avec Python](./mon-portfolio/tree/main/P10)<br>
 Analyse exploratoire, analyse descriptive, algorithme de prédiction.
 * [Projet 9 : Produisez une étude de marché avec Python](./projets/projet-9/)<br>
 Analyse exploratoire, analyse descriptive, *clustering*.
