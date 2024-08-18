@@ -1,0 +1,699 @@
+---
+title: "projet"
+author: "Medjahed"
+date: '2022-09-04'
+output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+cust<-read.csv("c:/Users/hotsa/Downloads/Dan-P6-donnees/customers.csv")
+produc<-read.csv("C:/Users/hotsa/Downloads/DAN-P6-donnees/products.csv")
+trans<-read.csv("C:/Users/hotsa/Downloads/DAN-P6-donnees/transactions.csv")
+
+library(lubridate)
+library(zoo)
+library(ineq)
+library(dplyr)
+
+produc[produc[,"price"]<0,]
+
+nrow(trans[trans[,"id_prod"]=="T_0",])
+
+head(trans[!trans[,"id_prod"] %in% produc[,"id_prod"],]) 
+
+trans2<-trans1[trans1[,"id_prod"]!="0_2245",] 
+
+PT<-merge(produc,trans2, by="id_prod")
+LAPAGE<-merge(PT,cust, by="client_id")
+
+LAPAGE[,"date1"]<-as.Date(LAPAGE[,"date"])
+LAPAGE[,"date2"]<-format(as.Date(LAPAGE$date1),"%Y-%m")
+
+CA<-sum(LAPAGE[,"price"])
+summary(LAPAGE[,"price"]) 
+
+CAM<-tapply(LAPAGE[,"price"],LAPAGE[,"date2"],sum)
+head(CAM)
+
+plot(CAM, type = "l")
+axis(1, at=1:length(CAM),labels=names(CAM)) 
+
+CMC<-head(tapply(LAPAGE[,"price"],list(LAPAGE[,"date2"],LAPAGE[,"categ"]),sum)) 
+
+plot(CMC[,1], type = "l", ylim = c(0,max(CMC)))
+points(CMC[,2],type="l",col="red")
+points(CMC[,3],type="l",col="blue")
+axis(1, at=1:nrow(CMC),labels=rownames(CMC))
+
+CAT<-tapply(LAPAGE[,"price"],LAPAGE[,"categ"],sum) 
+
+CAS<-tapply(LAPAGE[,"price"],LAPAGE[,"sex"],sum) 
+
+LAPAGE[,"Age"]<-year(LAPAGE$date1)-LAPAGE$birth
+LAPAGE[,"classeAGE"]<-cut(LAPAGE$Age, breaks = seq(15,95,10))
+table(LAPAGE$classeAGE)
+
+CACLASSE<-tapply(LAPAGE$price, LAPAGE$classeAGE, sum) 
+
+CC<-tapply(LAPAGE$price,LAPAGE$client_id, sum)
+head(sort(CC, decreasing=TRUE)) 
+
+plot(Lc(CC))
+Gini(CC)
+
+MM<-rollmean(CAM,3)
+plot(CAM, type = "l")
+points(MM, type = "l", col="red")
+axis(1,at=1:length(CAM),labels=names(CAM))
+
+ANO<-aov(price~categ, data = LAPAGE)
+summary(ANO)
+
+boxplot(price~categ, data = LAPAGE)
+
+chisq.test(LAPAGE$categ, LAPAGE$sex)
+
+TdC<-table(LAPAGE$classeAGE, LAPAGE$categ)
+
+chisq.test(LAPAGE$classeAGE, LAPAGE$categ) 
+
+heatmap(TdC, Rowv = NA, Colv = NA)
+TdC.prop<-round(prop.table(TdC, margin=1)*100,1)
+
+AmA<-tapply(LAPAGE3$price,LAPAGE3$client_id,sum)
+
+AmA1<-as.data.frame(AmA)
+
+AmA1[,"client_id"]<-rownames(AmA1)
+
+LienAS<-merge(AmA1,cust1, by="client_id") 
+
+cor.test(LienAS$AmA,LienAS$birth) 
+
+LAPAGE4<-LAPAGE3[LAPAGE3$date3=="2022",] 
+
+DFre<-unique(LAPAGE4[,c("session_id","client_id")]) 
+
+Fre<-tapply(DFre$session_id,DFre$client_id,length) 
+
+Fre<-as.data.frame(Fre) 
+
+Fre[,"client_id"]<-rownames(Fre)
+
+Fre1<-merge(Fre,cust1,by="client_id") 
+
+Fre2<-Fre1[Fre1[,"Fre"]<1000,]
+plot(x=Fre2$birth, y=Fre2$Fre)
+
+cor.test(Fre2$birth,Fre2$Fre) 
+
+LMFre<-lm(Fre2$birth~Fre2$Fre)
+abline(LMFre,col='red')
+LMFre
+
+Tpanier<-tapply(LAPAGE4$client_id,LAPAGE4$session_id,length) 
+
+Tpanier<-as.data.frame(Tpanier) 
+
+Tpanier[,"session_id"]<-rownames(Tpanier)
+
+clientsession<-unique(LAPAGE4[,c("session_id","client_id")])
+
+AA<-merge(clientsession,Tpanier, by="session_id")
+Meanclient<-tapply(AA$Tpanier,AA$client_id,mean)
+Meanclient<-as.data.frame(Meanclient)
+Meanclient[,"client_id"]<-rownames(Meanclient)
+
+cust1<-cust
+cust1[,"birth"]<-2022-(cust1[,"birth"])
+
+agetaille<-merge(cust1,Meanclient,by="client_id")
+plot(agetaille$Meanclient,agetaille$birth) 
+
+cor.test(agetaille$Meanclient,agetaille$birth)
+
+homme<-agetaille[agetaille$sex=="m",]
+femme<-agetaille[agetaille$sex=="f",] 
+
+hist(homme$Meanclient)
+hist(femme$Meanclient)
+
+shapiro.test(homme$Meanclient) 
+
+shapiro.test(femme$Meanclient)
+
+var.test(homme$Meanclient,femme$Meanclient) 
+
+boxplot(Meanclient~sex,data = agetaille) 
+
+wilcox.test(homme$Meanclient,femme$Meanclient) 
+
+boxplot(birth~categ, data = AGECAT) 
+
+Czero<-AGECAT[AGECAT$categ=="0",]
+Cun<-AGECAT[AGECAT$categ=="1",]
+Cdeux<-AGECAT[AGECAT$categ=="2",]
+
+hist(Czero[,"birth"])
+hist(Cun[,"birth"])
+hist(Cdeux[,"birth"])
+
+ks.test(Czero[,"birth"],"pnorm")
+ks.test(Cun[,"birth"],"pnorm")
+ks.test(Cdeux[,"birth"],"pnorm")
+
+var.test(Czero$birth,Cun$birth)
+var.test(Czero$birth,Cdeux$birth)
+var.test(Cun$birth,Cdeux$birth)
+
+wilcox.test(Czero$birth,Cun$birth)
+wilcox.test(Czero$birth,Cdeux$birth)
+wilcox.test(Cun$birth,Cdeux$birth)
+
+```
+
+## insertion des données:
+
+cust\<-read.csv("c:/Users/hotsa/Downloads/Dan-P6-donnees/customers.csv")
+produc\<-read.csv("C:/Users/hotsa/Downloads/DAN-P6-donnees/products.csv")
+trans\<-read.csv("C:/Users/hotsa/Downloads/DAN-P6-donnees/transactions.csv")
+
+## et installation des Library:
+
+lubridate zoo ineq
+
+## selection des lignes ou le prix est inferieur à 0
+```{r}
+produc[produc[,"price"]<0,] 
+
+```
+id_prod price categ
+732 T_0 -1 0 
+
+## suppression des lignes ou le prix est négatif
+ 
+[1] 200
+
+il y a 200 lignes a supprimer
+```{r}
+ nrow(trans[trans[,"id_prod"]=="T_0",])
+```
+
+## selectionner les lignes d’un ficher qu’il ne trouve pas dans l’autre
+
+```{r}
+head(trans[!trans[,"id_prod"] %in% produc[,"id_prod"],]) 
+```
+## Puis les supprimer
+
+```{r}
+trans2<-trans1[trans1[,"id_prod"]!="0_2245",] 
+```
+## Fusionner les différents tables entre elles:
+
+```{r}
+PT<-merge(produc,trans2, by="id_prod")
+LAPAGE<-merge(PT,cust, by="client_id") 
+```
+
+## on fait le premier merge: 
+le premier entre le ficher produc et le ficher trans2
+puis entre le produit final du premier merge et le fichier cust
+
+
+## créer des colonnes avec seulement  le mois et  seulement l'année
+
+```{r}
+LAPAGE[,"date1"]<-as.Date(LAPAGE[,"date"])
+LAPAGE[,"date2"]<-format(as.Date(LAPAGE$date1),"%Y-%m") 
+```
+## Calcul autour du chiffre d’affaires
+
+```{r}
+CA<-sum(LAPAGE[,"price"])
+summary(LAPAGE[,"price"]) 
+```
+## calcul du chiffres d’affaire en fonction du mois
+
+```{r}
+CAM<-tapply(LAPAGE[,"price"],LAPAGE[,"date2"],sum)
+head(CAM) 
+```
+## Graphique du chiffres d’affaire en fonction du mois
+
+```{r}
+plot(CAM, type = "l")
+axis(1, at=1:length(CAM),labels=names(CAM)) 
+```
+J’ai supposé qu’il y a eu un panne informatique pour le mois d’octobre 
+
+## Calcul du chiffres d’affaires en fonction de la catégorie et du mois
+
+```{r}
+CMC<-head(tapply(LAPAGE[,"price"],list(LAPAGE[,"date2"],LAPAGE[,"categ"]),sum)) 
+```
+## Courbes des chiffres d’affaires en fonctions des categories
+
+```{r}
+plot(CMC[,1], type = "l", ylim = c(0,max(CMC)))
+points(CMC[,2],type="l",col="red")
+points(CMC[,3],type="l",col="blue")
+axis(1, at=1:nrow(CMC),labels=rownames(CMC)) 
+```
+## calcul du chiffres d’affaire en fonction de la catégorie
+
+
+```{r}
+CAT<-tapply(LAPAGE[,"price"],LAPAGE[,"categ"],sum) 
+```
+les differents chiffres d’affaires en fonction de la catégorie
+La catégorie 0 a le plus gros chiffres d’affaire.
+
+## calcul du chiffres d’affaire en fonction du sexe
+
+
+```{r}
+CAS<-tapply(LAPAGE[,"price"],LAPAGE[,"sex"],sum) 
+```
+
+
+les hommes ont un chiffre d’affaire un peu plus élevé que les femmes
+
+## calcul du chiffres d’affaire en fonction des différentes tranches d'âge
+Creation d’un colonnes avec des tranches d’age:
+
+```{r}
+LAPAGE[,"Age"]<-year(LAPAGE$date1)-LAPAGE$birth
+LAPAGE[,"classeAGE"]<-cut(LAPAGE$Age, breaks = seq(15,95,10))
+table(LAPAGE$classeAGE)
+```
+
+## Chiffre d’affaire en fonction des différentes classes d'âge:
+```{r}
+CACLASSE<-tapply(LAPAGE$price, LAPAGE$classeAGE, sum) 
+```
+
+Les 45-55 ans ont le plus grand chiffres d’affaires
+
+## calcul du chiffres d’affaire par client
+la ligne de code : 
+
+```{r}
+CC<-tapply(LAPAGE$price,LAPAGE$client_id, sum)
+head(sort(CC, decreasing=TRUE)) 
+```
+## Courbe de Lorenz et coefficient de Gini
+
+```{r}
+plot(Lc(CC))
+Gini(CC) 
+```
+## Calcul de la moyenne mobile
+Elle permet d’avoir la tendance du chiffre d’affaire
+
+```{r}
+MM<-rollmean(CAM,3)
+plot(CAM, type = "l")
+points(MM, type = "l", col="red")
+axis(1,at=1:length(CAM),labels=names(CAM)) 
+```
+## Analyse deux variables: 1 qualitatives et 1 quantitatives:
+
+```{r}
+ANO<-aov(price~categ, data = LAPAGE)
+summary(ANO) 
+```
+Signification :PR(>F) est inferieur a 0,001. 
+La catégorie de l’article a une influence sur le prix de l’article
+
+```{r}
+boxplot(price~categ, data = LAPAGE)
+```
+
+# Analyse bivariée
+
+## Analyse deux variables qualitatives chi2: catégorie et sexe
+Tableau de contingence:
+
+Ligne de code:
+
+```{r}
+chisq.test(LAPAGE$categ, LAPAGE$sex)
+```
+La p-value est inferieur a 5 % alors il y a une corrélation entre le sexe et la catégorie.
+
+## Analyse entre le lien classe d’age des clients et les catégories des livres achetés 
+Faire un tableau de contingence:
+Ligne de code
+
+```{r}
+TdC<-table(LAPAGE$classeAGE, LAPAGE$categ)
+```
+## Analyse entre le lien classe d'âge des clients et les catégories des livres achetés
+
+
+```{r}
+chisq.test(LAPAGE$classeAGE, LAPAGE$categ) 
+```
+
+Signification:
+  La p-value est inferieur a 5 % donc il y a une corrélation entre la classe d'âge et la catégorie.
+
+
+## Analyse deux variables qualitatives chi2: catégorie et classe d’age
+
+Ligne de code:
+
+```{r}
+heatmap(TdC, Rowv = NA, Colv = NA)
+TdC.prop<-round(prop.table(TdC, margin=1)*100,1)
+```
+
+Plus la couleur est foncé plus corrélation est élève
+
+## Analyse du lien entre l’âge des clients et le montant total des achats (deux variables quantitatives)
+### Faire un tapply entre le prix et les client pour savoir la somme total par client:
+
+
+```{r}
+AmA<-tapply(LAPAGE3$price,LAPAGE3$client_id,sum)
+```
+### Transformer le tapply en dataframe:
+
+```{r}
+AmA1<-as.data.frame(AmA)
+```
+### Changer le nom de la colonne:
+
+```{r}
+AmA1[,"client_id"]<-rownames(AmA1)
+```
+### Faire le merge:
+
+```{r}
+LienAS<-merge(AmA1,cust1, by="client_id") 
+```
+### Correlation:
+
+```{r}
+cor.test(LienAS$AmA,LienAS$birth) 
+```
+
+### Signification:
+Il y a une faible corrélation négative qui est significativement différente de zéro et elle est de -0,03
+Il y a une corrélation entre l'âge des clients et le montant total des achats
+
+
+## Analyse du lien entre l'âge du client et la fréquence d’achat
+
+La fréquence d'achat, c'est-à-dire le nombre d'achats réalisé par un client sur une période donnée, 
+est un élément de segmentation utilisé couramment en marketing direct.
+
+### sélection des lignes
+  
+```{r}
+LAPAGE4<-LAPAGE3[LAPAGE3$date3=="2022",] 
+```
+
+
+### afficher le nombre de ligne unique 
+Creation d’un ficher avec chaque session unique :
+
+```{r}
+DFre<-unique(LAPAGE4[,c("session_id","client_id")]) 
+```
+
+
+### Compter le nombre de session par client
+
+```{r}
+Fre<-tapply(DFre$session_id,DFre$client_id,length) 
+```
+
+
+### Transformer en dataframe Fre
+
+```{r}
+Fre<-as.data.frame(Fre) 
+```
+
+
+### Changer le nom de la colonne
+
+```{r}
+Fre[,"client_id"]<-rownames(Fre) 
+```
+
+### Faire un merge entre Fre et cust1 (=ficher cust pour l’année 2022)
+
+```{r}
+Fre1<-merge(Fre,cust1,by="client_id") 
+```
+## Analyse du lien entre l'âge du client et la fréquence d’achat
+faire un plot avant une corrélation, permet de voir la forme du nuage de point
+Supprimer les extrêmes supérieurs à 1000
+
+```{r}
+Fre2<-Fre1[Fre1[,"Fre"]<1000,]
+plot(x=Fre2$birth, y=Fre2$Fre) 
+```
+### Faire la corrélation:
+
+```{r}
+cor.test(Fre2$birth,Fre2$Fre) 
+```
+
+
+Il y a une corrélation positive qui est significativement différente de zéro et elle est de 0.16.
+Il y a une corrélation entre l'âge du client et la fréquence d’achat
+
+## Analyse du lien entre l'âge du client et la fréquence d’achat
+Droites de régression linéaire:
+
+```{r}
+LMFre<-lm(Fre2$birth~Fre2$Fre)
+abline(LMFre,col='red')
+LMFre
+```
+## Analyse du lien entre L'âge du client et la taille du panier moyen
+Mon analyse est pour l’année 2022, quand les clients sont le plus âgé
+
+```{r}
+Tpanier<-tapply(LAPAGE4$client_id,LAPAGE4$session_id,length) 
+```
+### Transformation de Tpanier en dataframe
+
+```{r}
+Tpanier<-as.data.frame(Tpanier) 
+```
+### Renommer la colonne:
+
+```{r}
+Tpanier[,"session_id"]<-rownames(Tpanier)
+```
+
+Pour avoir le client qui correspond a chaque session
+
+```{r}
+clientsession<-unique(LAPAGE4[,c("session_id","client_id")]) 
+```
+## Analyse du lien entre L'âge du client et la taille du panier moyen
+### Faire le merge:
+AA<-merge(clientsession,Tpanier, by="session_id")
+
+
+### taille moyenne des panier de chacun des clients
+
+```{r}
+Meanclient<-tapply(AA$Tpanier,AA$client_id,mean)
+Meanclient<-as.data.frame(Meanclient)
+Meanclient[,"client_id"]<-rownames(Meanclient) 
+```
+
+### faire le merge avec le id client:
+
+```{r}
+cust1<-cust
+cust1[,"birth"]<-2022-(cust1[,"birth"]) 
+```
+### Faire le merge entre :
+
+```{r}
+agetaille<-merge(cust1,Meanclient,by="client_id")
+plot(agetaille$Meanclient,agetaille$birth) 
+```
+
+### correlation:
+```{r}
+cor.test(agetaille$Meanclient,agetaille$birth)
+```
+
+Signification: 
+Il y a une faible corrélation négative qui est significativement différente de zéro et elle est de -0,18
+Il y a une correlation entre l’age du client et la taille du panier moyen.
+
+## Analyse du lien entre le genre et la taille du panier moyen
+Est-ce que la taille  du panier moyen est significativement differente entre les hommes et les femmes
+```{r}
+homme<-agetaille[agetaille$sex=="m",]
+femme<-agetaille[agetaille$sex=="f",] 
+```
+
+
+Histogramme pour voir la forme de la distribution
+
+```{r}
+hist(homme$Meanclient)
+hist(femme$Meanclient) 
+```
+
+meanclient est égale a la taille du panier pour chaque client
+
+## Analyse du lien entre le genre et la taille du panier moyen
+
+Pour les hommes
+```{r}
+shapiro.test(homme$Meanclient) 
+```
+hypothèse h0 est invalidée car inferieur a 0.05 donc la distribution ne suit pas la loi normale
+
+Pour les femmes 
+```{r}
+shapiro.test(femme$Meanclient) 
+```
+hypothèse h0 est invalidée car inferieur a 0.05 donc la distribution ne suit pas la loi normale
+
+## Analyse du lien entre le genre et la taille du panier moyen
+test d'égalité des variances entre les deux.
+
+```{r}
+var.test(homme$Meanclient,femme$Meanclient) 
+```
+Signification:
+Les variances ne sont pas égales entre les deux 
+
+## Analyse du lien entre le genre et la taille du panier moyen
+
+boite a moustage
+```{r}
+boxplot(Meanclient~sex,data = agetaille) 
+```
+
+
+
+## Analyse du lien entre le genre et la taille du panier moyen
+On ne peut pas faire une anova , donc nous allons faire un test non paramétrique: 
+
+```{r}
+wilcox.test(homme$Meanclient,femme$Meanclient) 
+```
+Signification:
+P-value est supérieure a 0,05 donc il n’y a pas de corrélation entre le genre et la taille du panier moyen
+
+## Analyse de la corrélation entre l'âge du clients et la catégorie des livres achetés.
+
+Est que l'âge moyen du client est significativement différentes en fonction de la catégorie du livres
+
+```{r}
+boxplot(birth~categ, data = AGECAT) 
+```
+## Analyse de la corrélation entre l'âge du clients et la catégorie des livres achetés.
+```{r}
+Czero<-AGECAT[AGECAT$categ=="0",]
+Cun<-AGECAT[AGECAT$categ=="1",]
+Cdeux<-AGECAT[AGECAT$categ=="2",]
+
+```
+
+
+### Histogramme pour chaque catégorie:
+
+```{r}
+hist(Czero[,"birth"])
+hist(Cun[,"birth"])
+hist(Cdeux[,"birth"])
+```
+### Faire trois test de normalité pour chacun des trois catégories:
+  Echantillon est supperieur de 5000 donc on ne peut pas faire  test de shapiro.
+  On doit donc faire un test de Kolmogorov-Smirnov pour chacune des catégories:	
+
+```{r}
+ks.test(Czero[,"birth"],"pnorm")
+ks.test(Cun[,"birth"],"pnorm")
+ks.test(Cdeux[,"birth"],"pnorm")
+```  
+
+signification :
+Pour les trois :  ce n'est pas une distribution normal, l'hypothese h0 est invalidé
+
+### Puis test d’égalité des variances , deux a deux :
+Entre la catégorie 0 et 1:
+Entre la categorie 0 et 2:
+Entre la categorie 1 et 2:
+
+```{r}
+var.test(Czero$birth,Cun$birth)
+var.test(Czero$birth,Cdeux$birth)
+var.test(Cun$birth,Cdeux$birth)
+
+```
+
+l'hypothese h0 est invalidé pour les trois
+
+
+
+### on fait un test de wilcox:
+
+```{r}
+wilcox.test(Czero$birth,Cun$birth)
+wilcox.test(Czero$birth,Cdeux$birth)
+wilcox.test(Cun$birth,Cdeux$birth)
+
+```
+
+Signification:
+ho: l'âge  est significativement diffèrent entre les acheteur de la catégorie 1 et la catégorie 0, il y a donc une corrélation entre l'âge  et la catégorie du livres achetés. 
+ho: l'âge  est significativement diffèrent entre les acheteur de la catégorie 0 et la catégorie  1, il y a donc une corrélation entre l'âge  et la catégorie du livres achetés. 
+ho: l'âge  est significativement diffèrent entre les acheteur de la catégorie 1 et la catégorie 2,  il y a donc une corrélation entre l'âge  et la catégorie du livres achetés. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
