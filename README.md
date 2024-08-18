@@ -11,7 +11,7 @@ Le scénario, les objectifs, les outils utilisés et les compétences acquises s
 Analyse exploratoire, analyse descriptive, algorithme de prédiction.
 * [Projet 9 : Produisez une étude de marché avec Python](./projets/projet-9/)<br>
 Analyse exploratoire, analyse descriptive, *clustering*.
-* [Projet 8 : Faites une étude sur l'eau potable avec Power BI](./projets/projet-8/)<br>
+* [Projet 8 : Faites une étude sur l'eau potable ](./projets/projet-8/)<br>
 Préparation de données, réalisation de *dashboards*.
 * [Projet 7 : Analysez des indicateurs de l'égalité femme-homme avec Knime](./projets/projet-7/)<br>
 Création d'un rapport automatique dans un ETL (importation, nettoyage, visualisation et exportation).
