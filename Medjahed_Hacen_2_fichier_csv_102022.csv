@@ -1,0 +1,257 @@
+Ancienneté_an;Distance domicile/Travail;Service;Work_accident;Niveau de satisfaction;Contrat;Durée hebdo;Salaire base mensuel;%variable_moyen;Augmentation;Promotion;Sexe;Counter;Temps travail
+22.5;69;Consultant;Non;60;CDI;35;9873.5;13;0;0;F;1;temps plein
+10.8;32;Consultant;Non;39;CDI;35;4296.7167;39;0;1;H;2;temps plein
+13;68;RH;Oui;62;CDI;35;3705.2167;29;1;1;F;3;temps plein
+21.7;59;Consultant;Non;98;CDI;35;1697.15;17;1;0;H;4;temps plein
+3.3;15;R&D;Oui;81;CDD;35;2848.3;15;1;0;H;5;temps plein
+10.5;6;Commercial;Non;47;CDI;35;5464.55;34;0;0;H;6;temps plein
+17.8;56;Marketing;Oui;34;CDI;35;9999.3833;27;0;1;H;7;temps plein
+8.2;43;RH;Oui;48;CDI;24;3116.88;37;0;1;F;8;temps Partiel
+7.5;60;Marketing;Non;25;CDI;24;5462.08;39;0;1;H;9;temps Partiel
+18.9;69;Compta Finances;Oui;89;CDI;35;2769.4333;33;0;0;H;10;temps plein
+5.9;70;RH;Oui;7;CDI;35;5522.1833;9;1;1;F;11;temps plein
+20.2;53;Consultant;Non;24;CDI;35;7308.8167;12;0;1;F;12;temps plein
+22.4;64;Commercial;Non;15;CDI;24;5895.76;23;1;1;F;13;temps Partiel
+20;8;R&D;Non;31;CDI;35;7081.3167;26;0;1;H;14;temps plein
+13.1;27;Commercial;Oui;56;CDI;35;6195.5833;23;0;1;H;15;temps plein
+23.3;9;Marketing;Non;81;CDI;35;5517.6333;23;1;1;H;16;temps plein
+15.2;31;R&D;Non;35;CDI;35;8458.45;1;0;0;H;17;temps plein
+3.2;15;Consultant;Oui;60;CDI;35;2132.4333;18;1;1;F;18;temps plein
+25;58;Consultant;Non;19;CDI;35;3097.0333;13;0;0;F;19;temps plein
+16.3;28;Compta Finances;Oui;32;CDI;35;8218.8167;14;0;1;F;20;temps plein
+8.4;17;Consultant;Oui;51;CDI;35;5388.7167;30;1;0;F;21;temps plein
+12.2;28;Consultant;Oui;45;CDI;35;1873.0833;27;0;0;H;22;temps plein
+15.8;46;Commercial;Oui;60;CDI;35;4152.6333;7;1;1;F;23;temps plein
+5.8;44;R&D;Oui;8;CDI;35;9096.9667;21;0;1;H;24;temps plein
+15.6;65;Marketing;Oui;64;CDI;35;7264.8333;31;0;1;H;25;temps plein
+5.3;60;Compta Finances;Oui;12;CDI;35;2052.05;13;1;1;F;26;temps plein
+1.3;43;Consultant;Oui;6;CDD;32;2496;21;;;F;27;temps Partiel
+9.2;44;RH;Oui;88;CDI;35;2767.9167;6;1;0;H;28;temps plein
+3.1;13;RH;Non;65;CDI;35;3486.8167;19;0;1;H;29;temps plein
+10.3;11;Consultant;Oui;87;CDI;24;1709.76;10;1;1;H;30;temps Partiel
+6.8;18;Commercial;Oui;67;CDI;35;3165.2833;0;0;1;F;31;temps plein
+22.8;38;Marketing;Oui;70;CDI;35;6002.9667;2;1;1;H;32;temps plein
+8.2;13;Marketing;Oui;22;CDI;35;2998.45;21;1;1;H;33;temps plein
+24;60;RH;Oui;92;CDI;35;3508.05;11;0;1;H;34;temps plein
+24.4;8;Consultant;Non;36;CDI;35;3232.0167;35;0;0;H;35;temps plein
+23.7;38;Consultant;Oui;15;CDI;28;1851.5467;19;0;1;H;36;temps Partiel
+15.7;45;RH;Non;80;CDI;35;5359.9;4;1;0;H;37;temps plein
+18.4;64;Commercial;Non;11;CDI;35;9069.6667;1;0;0;H;38;temps plein
+6;67;Compta Finances;Oui;70;CDI;35;7377.0667;17;1;1;F;39;temps plein
+3.7;26;RH;Oui;6;CDI;35;7157.15;3;0;0;F;40;temps plein
+15.6;24;Commercial;Non;80;CDI;35;8714.7667;37;1;0;H;41;temps plein
+9.3;45;Consultant;Non;95;CDI;35;2070.25;24;0;0;F;42;temps plein
+15.7;29;Compta Finances;Non;70;CDI;35;8073.2167;38;1;1;H;43;temps plein
+17.1;43;Consultant;Non;69;CDI;35;1651.65;18;0;0;H;44;temps plein
+17.4;42;Consultant;Oui;90;CDI;35;4516.6333;34;1;0;F;45;temps plein
+17.2;11;Compta Finances;Oui;56;CDI;35;3383.6833;23;0;0;H;46;temps plein
+1.4;42;Consultant;Non;18;CDD;35;3168.3167;10;;;F;47;temps plein
+5.8;59;RH;Oui;46;CDI;35;4499.95;22;1;0;H;48;temps plein
+1.4;67;Marketing;Non;19;CDD;35;1989.8667;5;;;H;49;temps plein
+2.5;55;Marketing;Non;67;CDI;35;1863.9833;12;1;1;F;50;temps plein
+9.1;46;R&D;Oui;74;CDI;35;9366.9333;8;1;1;F;51;temps plein
+23.9;37;Marketing;Non;1;CDI;24;6842.16;21;1;1;H;52;temps Partiel
+1.7;60;Commercial;Oui;58;CDD;35;3185;3;;;F;53;temps plein
+22.4;48;Marketing;Non;81;CDI;35;3582.3667;30;1;1;H;54;temps plein
+8.2;25;Compta Finances;Non;17;CDI;35;1833.65;8;0;1;H;55;temps plein
+4.2;40;R&D;Oui;4;CDI;35;6356.35;26;1;0;F;56;temps plein
+0.4;17;Consultant;Oui;24;CDD;35;3033.3333;8;;;F;57;temps plein
+3.8;30;Consultant;Non;77;CDI;35;7672.8167;37;1;1;F;58;temps plein
+6.3;17;Consultant;Oui;30;CDI;24;1110.72;14;1;1;H;59;temps Partiel
+7.3;9;Consultant;Oui;51;CDI;24;5448.56;30;0;1;H;60;temps Partiel
+19;3;Compta Finances;Non;15;CDI;35;1835.1667;6;0;1;H;61;temps plein
+10.3;31;Compta Finances;Non;32;CDI;35;8056.5333;13;0;1;F;62;temps plein
+7.4;62;Consultant;Oui;72;CDI;35;9737;12;1;1;H;63;temps plein
+23.9;47;Commercial;Oui;86;CDI;35;5581.3333;20;1;0;F;64;temps plein
+16.2;66;RH;Non;46;CDI;35;5056.5667;24;1;1;F;65;temps plein
+10.7;30;RH;Oui;1;CDI;35;9039.3333;20;1;1;H;66;temps plein
+1.9;15;Commercial;Oui;76;CDD;35;2881.6667;27;;;F;67;temps plein
+9.7;30;RH;Non;29;CDI;35;6175.8667;38;0;1;H;68;temps plein
+0.6;14;Marketing;Oui;70;CDD;35;2426.6667;21;;;F;69;temps plein
+23;3;Compta Finances;Oui;65;CDI;35;7898.8;35;0;1;F;70;temps plein
+21.1;61;Consultant;Oui;1;CDI;35;9447.3167;0;1;1;H;71;temps plein
+21.6;14;Commercial;Oui;62;CDI;35;2396.3333;11;0;1;H;72;temps plein
+8.3;50;R&D;Non;93;CDI;35;8716.2833;20;0;0;H;73;temps plein
+16.2;21;Consultant;Oui;3;CDI;35;2731.5167;4;1;1;F;74;temps plein
+10.8;27;Commercial;Oui;78;CDI;35;7942.7833;38;1;0;F;75;temps plein
+6.5;68;Consultant;Oui;89;CDI;35;7178.3833;38;1;0;H;76;temps plein
+15.7;48;Consultant;Non;50;CDI;35;5585.8833;17;1;0;F;77;temps plein
+20.4;55;RH;Non;78;CDI;35;8277.9667;10;0;0;H;78;temps plein
+12.8;20;Commercial;Oui;52;CDI;35;2369.0333;20;0;0;F;79;temps plein
+20.6;13;Marketing;Oui;99;CDI;35;3462.55;3;1;0;H;80;temps plein
+9.2;21;Commercial;Oui;79;CDI;35;2511.6;21;0;1;H;81;temps plein
+20.1;12;Consultant;Non;25;CDI;35;9400.3;3;1;1;H;82;temps plein
+1.1;9;Marketing;Oui;96;CDD;35;3640;6;;;F;83;temps plein
+5.5;43;Consultant;Non;47;CDI;35;1774.5;16;1;1;F;84;temps plein
+16.8;60;Marketing;Oui;38;CDI;35;3597.5333;32;1;1;F;85;temps plein
+8.2;65;Marketing;Oui;1;CDI;24;5951.92;32;1;0;F;86;temps Partiel
+0.8;8;Compta Finances;Oui;45;CDD;35;3201.6833;38;;;F;87;temps plein
+7.5;6;RH;Non;90;CDI;35;3335.15;28;1;0;H;88;temps plein
+12;66;Consultant;Oui;46;CDI;35;4712.2833;26;1;1;F;89;temps plein
+24.9;62;Commercial;Non;17;CDI;35;5984.7667;6;0;1;H;90;temps plein
+5.3;30;Commercial;Oui;97;CDI;35;2928.6833;33;1;1;F;91;temps plein
+9.7;28;Consultant;Oui;39;CDI;35;6301.75;34;0;1;F;92;temps plein
+19.3;23;RH;Non;23;CDI;35;3218.3667;27;1;0;F;93;temps plein
+4.4;67;Consultant;Oui;81;CDI;35;1803.3167;8;1;0;H;94;temps plein
+12.7;16;RH;Oui;84;CDI;35;7263.3167;30;1;0;H;95;temps plein
+4.2;65;Marketing;Oui;40;CDI;35;2912;35;0;1;F;96;temps plein
+7.1;38;Consultant;Non;80;CDI;35;6409.4333;21;0;1;H;97;temps plein
+16.4;23;Compta Finances;Non;44;CDI;35;1772.9833;20;1;1;H;98;temps plein
+17.3;45;Commercial;Non;21;CDI;35;6902.35;17;0;1;F;99;temps plein
+5.6;7;Consultant;Oui;33;CDI;24;4795.44;19;0;1;H;100;temps Partiel
+20.4;9;RH;Non;39;CDI;35;3803.8;30;0;0;H;101;temps plein
+11.7;43;Consultant;Non;1;CDI;35;3547.4833;39;1;0;F;102;temps plein
+10.2;42;Commercial;Non;98;CDI;35;2916.55;35;1;1;F;103;temps plein
+11.9;16;Compta Finances;Non;68;CDI;24;1059.76;1;0;1;F;104;temps Partiel
+10;21;Commercial;Oui;42;CDI;35;7927.6167;32;1;0;H;105;temps plein
+5.2;34;Compta Finances;Non;42;CDI;35;8332.5667;12;0;0;F;106;temps plein
+22.3;37;Marketing;Non;74;CDI;35;4082.8667;28;0;1;F;107;temps plein
+17.2;48;Commercial;Oui;40;CDI;35;9785.5333;28;0;1;H;108;temps plein
+14.2;8;Compta Finances;Non;28;CDI;35;4421.0833;6;1;1;H;109;temps plein
+12.5;11;Consultant;Non;69;CDI;35;2843.75;2;0;0;H;110;temps plein
+21.5;55;RH;Oui;87;CDI;35;8563.1;7;0;0;H;111;temps plein
+22.2;37;Compta Finances;Non;52;CDI;35;4988.3167;8;0;0;H;112;temps plein
+9.2;65;Consultant;Oui;5;CDI;28;7269.08;7;1;1;H;113;temps Partiel
+12.4;41;Marketing;Non;32;CDI;35;1669.85;22;1;0;H;114;temps plein
+23.2;29;Commercial;Oui;39;CDI;35;7098;1;1;1;H;115;temps plein
+22.8;67;R&D;Oui;4;CDI;35;6526.2167;36;0;1;H;116;temps plein
+11.7;54;Compta Finances;Oui;96;CDI;35;8422.05;38;0;1;F;117;temps plein
+6.3;29;Commercial;Oui;14;CDI;35;8337.1167;16;0;1;H;118;temps plein
+10.5;56;Commercial;Non;13;CDI;35;9777.95;4;1;0;F;119;temps plein
+22.6;47;Commercial;Non;95;CDI;35;3677.9167;33;0;0;H;120;temps plein
+22.7;4;Marketing;Non;45;CDI;35;9940.2333;24;0;0;H;121;temps plein
+23.5;14;Consultant;Oui;66;CDI;35;2777.0167;10;1;0;H;122;temps plein
+24.3;35;Commercial;Non;47;CDI;35;6818.9333;14;1;0;F;123;temps plein
+24.2;58;Marketing;Non;29;CDI;35;4424.1167;30;0;0;F;124;temps plein
+10;16;RH;Oui;58;CDI;35;9928.1;27;1;0;H;125;temps plein
+1.8;6;Compta Finances;Non;84;CDD;35;2123.3333;39;;;F;126;temps plein
+15.7;69;Compta Finances;Non;48;CDI;35;4263.35;31;0;0;H;127;temps plein
+19.4;38;Commercial;Non;44;CDI;35;8629.8333;3;0;0;F;128;temps plein
+24.4;39;R&D;Oui;32;CDI;35;4663.75;5;0;1;F;129;temps plein
+20.6;64;RH;Oui;11;CDI;24;4851.6;14;0;0;F;130;temps Partiel
+5.9;23;Marketing;Non;37;CDI;35;5930.1667;33;0;0;H;131;temps plein
+21.9;55;Commercial;Non;77;CDI;35;7496.8833;6;1;0;F;132;temps plein
+11.7;68;RH;Oui;69;CDI;35;8108.1;38;0;0;F;133;temps plein
+20.5;45;Commercial;Oui;7;CDI;35;6121.2667;32;0;0;H;134;temps plein
+16.2;55;Marketing;Oui;51;CDI;35;4563.65;38;1;0;F;135;temps plein
+13;26;Compta Finances;Oui;78;CDI;35;9978.15;34;0;1;H;136;temps plein
+10.2;35;Marketing;Non;92;CDI;35;4624.3167;15;0;0;H;137;temps plein
+13.7;34;Compta Finances;Oui;40;CDI;35;2079.35;7;1;1;F;138;temps plein
+13.2;44;Consultant;Non;37;CDI;24;2055.04;12;0;1;H;139;temps Partiel
+18.7;26;Commercial;Oui;48;CDI;35;9573.2;7;0;0;H;140;temps plein
+12.6;33;Consultant;Oui;82;CDI;35;4289.1333;12;0;1;F;141;temps plein
+21.8;31;Marketing;Oui;75;CDI;35;8056.5333;14;0;0;F;142;temps plein
+0.3;42;Marketing;Non;25;CDD;35;3693.0833;24;;;H;143;temps plein
+9.8;22;RH;Non;77;CDI;35;5106.6167;10;0;1;F;144;temps plein
+1.2;12;Consultant;Non;100;CDD;32;2357.3333;12;;;H;145;temps Partiel
+17;28;Commercial;Oui;42;CDI;35;3260.8333;30;1;0;F;146;temps plein
+2.9;3;Consultant;Non;2;CDI;35;4449.9;33;1;1;H;147;temps plein
+22.2;28;RH;Non;63;CDI;35;7877.5667;36;1;0;F;148;temps plein
+8.3;63;Consultant;Non;50;CDI;35;4281.55;13;1;0;H;149;temps plein
+22.8;62;Consultant;Non;34;CDI;35;4134.4333;22;0;0;H;150;temps plein
+8.8;13;Marketing;Non;25;CDI;35;3256.2833;34;0;0;F;151;temps plein
+20.2;65;Consultant;Oui;63;CDI;35;6591.4333;19;0;0;F;152;temps plein
+8.7;60;Compta Finances;Oui;26;CDI;35;8696.5667;37;0;1;H;153;temps plein
+21.1;5;Consultant;Non;59;CDI;35;2073.2833;28;0;1;F;154;temps plein
+9.3;35;Consultant;Non;62;CDI;28;5097.2133;10;1;0;H;155;temps Partiel
+7.5;70;RH;Oui;86;CDI;35;7710.7333;27;0;1;H;156;temps plein
+11.8;46;RH;Non;49;CDI;35;3882.6667;1;0;1;H;157;temps plein
+14.9;13;RH;Oui;99;CDI;35;3835.65;26;0;1;F;158;temps plein
+7.4;5;Compta Finances;Non;84;CDI;35;9256.2167;1;1;0;F;159;temps plein
+19;7;Consultant;Oui;8;CDI;35;5455.45;7;0;1;H;160;temps plein
+20;57;Commercial;Oui;44;CDI;35;8428.1167;18;1;0;H;161;temps plein
+5.8;61;Consultant;Oui;94;CDI;35;5810.35;36;1;0;H;162;temps plein
+15.6;36;Marketing;Non;37;CDI;35;4022.2;14;0;1;H;163;temps plein
+24;55;RH;Oui;95;CDI;35;5035.3333;24;0;1;H;164;temps plein
+23.9;52;RH;Oui;29;CDI;35;3797.7333;24;0;0;F;165;temps plein
+21.2;49;RH;Non;47;CDI;24;2735.2;27;0;1;H;166;temps Partiel
+10.8;44;Marketing;Oui;73;CDI;35;4763.85;7;1;0;F;167;temps plein
+23.3;60;R&D;Oui;54;CDI;35;7654.6167;5;1;1;H;168;temps plein
+10.6;18;Commercial;Non;84;CDI;35;8828.5167;17;0;1;F;169;temps plein
+3.5;61;Compta Finances;Non;44;CDI;35;2008.0667;35;0;0;F;170;temps plein
+4.8;33;Compta Finances;Non;14;CDI;35;4198.1333;34;1;1;F;171;temps plein
+24.7;53;Commercial;Non;61;CDI;35;3800.7667;9;1;1;F;172;temps plein
+5.5;46;Compta Finances;Non;31;CDI;35;1979.25;6;1;1;H;173;temps plein
+24.2;9;Commercial;Oui;86;CDI;35;2828.5833;21;0;0;H;174;temps plein
+23.3;48;R&D;Oui;57;CDI;24;6178.64;17;0;0;H;175;temps Partiel
+22.7;59;Compta Finances;Oui;6;CDI;32;6743.36;4;0;0;F;176;temps Partiel
+9.9;45;Commercial;Oui;1;CDI;24;4882.8;17;1;1;F;177;temps Partiel
+21.1;22;Commercial;Non;15;CDI;35;5805.8;37;0;0;H;178;temps plein
+13.9;50;Commercial;Oui;15;CDI;35;9555;20;1;0;F;179;temps plein
+3.8;53;Commercial;Non;58;CDI;35;2070.25;34;0;0;F;180;temps plein
+15.1;34;RH;Non;55;CDI;35;5067.1833;39;1;0;F;181;temps plein
+14.3;31;Commercial;Oui;31;CDI;35;7713.7667;23;1;0;H;182;temps plein
+22.6;43;R&D;Non;41;CDI;24;4165.2;12;0;1;H;183;temps Partiel
+17.3;69;RH;Non;47;CDI;35;7687.9833;9;0;0;F;184;temps plein
+9.3;57;Compta Finances;Oui;4;CDI;35;4204.2;39;1;1;F;185;temps plein
+14.9;6;Commercial;Non;52;CDI;35;9488.2667;38;1;1;H;186;temps plein
+19.3;41;Marketing;Oui;69;CDI;35;3655.1667;33;0;1;H;187;temps plein
+1.8;59;Consultant;Non;59;CDD;35;2558.6167;22;;;H;188;temps plein
+7.2;59;Consultant;Oui;72;CDI;35;6413.9833;24;1;0;F;189;temps plein
+5.7;24;Consultant;Non;87;CDI;35;1703.2167;39;1;0;F;190;temps plein
+6.6;58;Consultant;Non;92;CDI;35;2027.7833;19;0;1;F;191;temps plein
+13.8;68;Marketing;Non;59;CDI;35;7637.9333;27;0;0;H;192;temps plein
+7.9;28;R&D;Oui;77;CDI;35;9573.2;5;1;0;H;193;temps plein
+5.5;67;Compta Finances;Non;66;CDI;35;7185.9667;7;1;1;H;194;temps plein
+4.4;43;RH;Non;20;CDI;35;5076.2833;33;0;0;F;195;temps plein
+14;44;Marketing;Non;40;CDI;35;1598.5667;18;0;1;F;196;temps plein
+4.2;39;R&D;Oui;32;CDI;35;5212.7833;11;0;0;H;197;temps plein
+15.8;68;Compta Finances;Oui;25;CDI;35;8655.6167;26;1;0;F;198;temps plein
+7.2;28;Consultant;Oui;13;CDI;35;3891.7667;32;0;0;H;199;temps plein
+6.7;20;Marketing;Oui;69;CDI;35;9218.3;4;0;0;F;200;temps plein
+8.2;3;Commercial;Non;63;CDI;35;2309.8833;23;0;0;F;201;temps plein
+19;13;RH;Non;3;CDI;35;9642.9667;17;0;0;H;202;temps plein
+6.4;68;RH;Oui;32;CDI;35;9635.3833;19;1;0;H;203;temps plein
+24.8;44;Compta Finances;Oui;47;CDI;24;3853.2;9;1;1;F;204;temps Partiel
+8.1;59;Compta Finances;Non;93;CDI;35;4013.1;12;0;1;F;205;temps plein
+19.1;50;Consultant;Oui;99;CDI;35;6973.6333;31;0;1;H;206;temps plein
+14.2;4;Consultant;Oui;42;CDI;35;2024.75;4;1;0;H;207;temps plein
+7;29;Consultant;Non;68;CDI;35;6398.8167;11;1;0;H;208;temps plein
+24.2;62;Consultant;Oui;60;CDI;35;4000.9667;40;1;1;H;209;temps plein
+16.9;65;Consultant;Oui;36;CDI;35;6043.9167;3;1;1;H;210;temps plein
+21.2;44;Consultant;Non;89;CDI;35;2918.0667;39;1;1;H;211;temps plein
+19.2;35;Commercial;Oui;74;CDI;35;6031.7833;39;1;0;H;212;temps plein
+17.4;41;Consultant;Oui;68;CDI;35;2561.65;13;0;0;H;213;temps plein
+16.2;47;RH;Oui;98;CDI;24;2507.44;18;1;1;F;214;temps Partiel
+3.4;42;Consultant;Oui;60;CDI;35;2675.4;20;1;0;H;215;temps plein
+12.5;53;Compta Finances;Non;55;CDI;35;7601.5333;19;1;1;F;216;temps plein
+6;12;R&D;Oui;30;CDI;35;6494.3667;1;0;0;H;217;temps plein
+16.2;19;RH;Non;15;CDI;35;3012.1;19;1;1;F;218;temps plein
+14.3;65;Compta Finances;Non;94;CDI;35;6127.3333;0;1;0;F;219;temps plein
+6.2;61;Consultant;Non;24;CDI;35;2834.65;15;1;0;H;220;temps plein
+4.6;51;Commercial;Oui;3;CDI;35;6212.2667;5;1;0;F;221;temps plein
+3;6;Commercial;Non;41;CDI;35;6838.65;5;0;0;F;222;temps plein
+24.7;30;Consultant;Non;51;CDI;35;5739.0667;6;1;1;F;223;temps plein
+16.2;69;Commercial;Oui;41;CDI;35;5949.8833;17;1;0;H;224;temps plein
+13.1;19;Marketing;Oui;89;CDI;35;8696.5667;34;1;0;H;225;temps plein
+13.8;63;Commercial;Oui;81;CDI;35;9497.3667;17;1;1;F;226;temps plein
+13.8;51;Commercial;Non;19;CDI;35;5749.6833;17;0;0;H;227;temps plein
+16.5;47;Compta Finances;Non;53;CDI;35;7889.7;27;0;1;F;228;temps plein
+10.3;11;Compta Finances;Oui;44;CDI;35;3436.7667;27;1;1;H;229;temps plein
+18.6;49;Compta Finances;Non;100;CDI;24;5724.16;15;1;1;H;230;temps Partiel
+5.2;5;RH;Non;62;CDI;35;8746.6167;19;0;1;F;231;temps plein
+7.9;27;RH;Oui;42;CDI;35;7148.05;21;1;1;F;232;temps plein
+1.1;14;Consultant;Non;81;CDD;35;2226.4667;2;;;F;233;temps plein
+9.9;48;Marketing;Non;17;CDI;28;7358.8667;31;1;1;H;234;temps Partiel
+19.5;30;RH;Non;73;CDI;24;3060.72;6;0;1;F;235;temps Partiel
+10.3;38;Consultant;Oui;25;CDI;35;3459.5167;30;0;0;F;236;temps plein
+9.1;46;Consultant;Non;7;CDI;35;9162.1833;17;1;1;F;237;temps plein
+1.1;31;Compta Finances;Non;18;CDD;35;1920.1;17;;;F;238;temps plein
+15.2;62;Compta Finances;Non;96;CDI;35;7753.2;21;1;0;H;239;temps plein
+13.3;17;Consultant;Non;9;CDI;28;2813.72;8;1;1;H;240;temps Partiel
+24.1;28;Marketing;Non;54;CDI;35;7184.45;37;1;1;H;241;temps plein
+20.5;61;Compta Finances;Oui;70;CDI;35;2604.1167;32;1;0;H;242;temps plein
+18.6;16;RH;Non;30;CDI;35;5293.1667;39;0;1;F;243;temps plein
+23.9;70;Commercial;Oui;38;CDI;35;6163.7333;16;1;1;F;244;temps plein
+6.7;7;RH;Non;35;CDI;24;4117.36;8;1;1;F;245;temps Partiel
+23.8;40;Consultant;Non;9;CDI;35;9426.0833;24;1;0;F;246;temps plein
+23.1;49;Commercial;Oui;31;CDI;35;5092.9667;11;1;1;F;247;temps plein
+18.2;23;Commercial;Oui;54;CDI;35;8126.3;36;1;0;F;248;temps plein
+6.3;23;Consultant;Non;69;CDI;35;9782.5;38;0;1;F;249;temps plein
+14.9;36;Commercial;Non;62;CDI;35;1590.9833;30;1;0;H;250;temps plein
+8.6;34;RH;Oui;84;CDI;35;7637.9333;21;1;0;F;251;temps plein
+7.9;59;Consultant;Non;34;CDI;35;7304.2667;17;1;0;F;252;temps plein
+10.2;59;Compta Finances;Non;60;CDI;35;8328.0167;14;1;0;F;253;temps plein
+11.9;65;RH;Non;59;CDI;32;8860.8;19;1;1;F;254;temps Partiel
+11.8;31;Commercial;Oui;66;CDI;24;4974.32;32;0;1;F;255;temps Partiel
+12.6;59;Marketing;Non;67;CDI;35;6583.85;13;1;1;F;256;temps plein
