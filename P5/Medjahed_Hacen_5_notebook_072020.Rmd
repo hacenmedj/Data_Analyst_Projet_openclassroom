@@ -1,0 +1,132 @@
+---
+title: "projet-5"
+author: "Medjahed"
+date: '2022-06-23'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+erp<-read.csv("C:/Users/hotsa/OneDrive/Bureau/oppenclassroum/projet5/erp.csv", sep = ";",dec = ",")
+liaison<-read.csv("C:/Users/hotsa/OneDrive/Bureau/oppenclassroum/projet5/liaison.csv",sep = ";")
+web<-read.csv("C:/Users/hotsa/OneDrive/Bureau/oppenclassroum/projet5/web.csv",sep = ";")
+
+web[web==""]<-NA
+
+web1<-web[!(is.na(web$sku)),]
+
+colnames(web1)
+web2<-web1[web1[,"post_type"]=="product",]
+
+liaison[liaison==""]<-NA
+liaison1<-liaison[!(is.na(liaison$id_web)),]
+
+colnames(web2)[1]<-"id_web"
+
+
+ERL<-merge(erp,liaison, by="product_id")
+FC<-merge(ERL,web2, by="id_web")
+
+FC[,"CAP"]<-(FC[,"price"]*FC[,"total_sales"])
+
+CAOL<-sum(FC[,"price"]*FC[,"total_sales"])
+
+boxplot(FC[,"price"])
+summary(FC[,"price"])
+
+
+FC[,"price"]>=83.1
+Qq1<-quantile(erp[,"price"],0.25)
+Qq3<-quantile(erp[,"price"],0.75)
+
+MH<-Qq3+1.5*(Qq3-Qq1)
+```
+
+
+## BOttleNeck
+
+Un marchand de vin très prestigieux
+
+## Mission de Laurent
+
+### rapprochement entre les bases
+
+#### transformer les cellules vides en NA :
+
+    web[web==""]<-NA
+
+#### suppimer tout les lignes ou il n'y a pas de valeurs dans une colonne :
+
+    web1<-web[!(is.na(web$sku)),]
+
+#### supprimer doublon :
+
+    web2<-web1[web1[,"post_type"]=="product",]
+
+#### transformer les cellules vides en NA de liaison :
+
+    liaison[liaison==""]<-NA
+
+#### suppimer tout les lignes ou il n'y a pas de valeurs dans une colonne :
+
+    liaison1<-liaison[!(is.na(liaison$id_web)),]
+
+#### faire le merge des fichers:
+
+    ERL<-merge(erp,liaison, by="product_id")
+    FC<-merge(ERL,web2, by="id_web")
+
+```{r}
+head(FC)
+```
+
+#### Le chiffre d'affaires:
+
+  -CA Par produit:
+
+```{r}
+FC[,"CAP"]<-(FC[,"price"]*FC[,"total_sales"])
+FC[,"CAP"]
+```
+
+  -CA réalisé en ligne:
+    sum(FC[,"price"]*FC[,"total_sales"])
+```{r}
+CAOL
+```
+
+#### des erreurs de saisie ?
+
+l'utilisation de la boite à moustache pour avoir les informations sur les possibles problemes de saisies ou les eventuelles valeurs aberrantes.
+
+```{r}
+boxplot(FC[,"price"])
+```
+
+#### resumé de la boite à moustache:
+
+```{r}
+summary(FC[,"price"])
+```
+
+#### Les quantiles:
+Qq1<-quantile(FC[,"price"],0.25)
+Qq3<-quantile(FC[,"price"],0.75)
+```{r}
+Qq1
+Qq3
+```
+
+
+####calcul de la moustache haute
+```{r}
+MH
+```
+
+#### Valeur extrémes
+Les valeurs en dehors de l’intervalle [Qq1, Qq3] sont considérées « extrêmes »
+sortir les valeurs extremes:
+```{r}
+FC[FC[,"price"]>=MH,]
+```
+
+les valeurs au dessus de la moustache haute ne sont ni des erreurs de saisies ni des valeurs aberrantes. Elles correponds aux prix de bouteilles qui sont plus élevés.
